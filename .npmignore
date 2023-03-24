@@ -1,0 +1,15 @@
+# Ignore documentation and playground
+docs
+PLAYGROUND
+
+# Ignore Typescript source
+src
+examples
+
+# Ignore config files
+*.config.*
+*config.*
+
+# Ignore .min. files and browser files
+dist/browser
+*.min.*
