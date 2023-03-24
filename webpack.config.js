@@ -1,7 +1,8 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-    entry: './dist/index.js',
+    entry: './dist/public-api.js',
     mode: 'production',
     output: {
         filename: 'input-selection-model.min.js',
@@ -10,6 +11,11 @@ module.exports = {
         libraryTarget: 'umd',
         umdNamedDefine: true,
         auxiliaryComment: 'A class for handling HTML input selection range tasks.',
+    },
+    optimization: {
+        minimizer: [new TerserPlugin({
+            extractComments: false,
+        })],
     },
     devServer: {
         compress: true,
