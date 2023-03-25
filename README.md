@@ -27,6 +27,9 @@ And import the class from a global object:
 new InputSelectionModel.SelectionModel(/* initial value */);
 ```
 
+## Documentation
+> More detailed documentation available [here](https://joker876.github.io/input-selection-model/docs/).
+
 ## Exported members
 - `SelectionModel` - a class for dealing with the selection in HTML inputs and textareas
 - `SelectionCoordinates` - a class for dealing with line & column based coordinates in an HTML textarea
@@ -38,7 +41,6 @@ new InputSelectionModel.SelectionModel(/* initial value */);
 - `posToRange` - a function for unifying `number` and `SelectionRange` values (always returns a `SelectionRange`).
 
 ## Basic Usage
-> More detailed documentation available [here](docs/index.md).
 
 ```typescript
 import { SelectionModel } from 'input-selection-model';
