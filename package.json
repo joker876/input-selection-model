@@ -11,12 +11,14 @@
         "test": "npm run build && npx jasmine",
         "start": "ts-node-dev --respawn src/index.ts",
         "build": "rmdir /s /Q dist & tsc",
-        "build-web": "npm run build && npm exec webpack",
+        "build-web": "npm run build && npm exec webpack && npm run copy-docs",
+        "copy-docs": "copyfiles docs/* dist/browser",
         "deploy": "gh-pages -d dist/browser"
     },
     "devDependencies": {
         "@types/jasmine": "^4.0.3",
         "@types/jest": "^29.2.3",
+        "copyfiles": "^2.4.1",
         "jasmine": "^4.1.0",
         "jasmine-ts-console-reporter": "^3.1.1",
         "terser-webpack-plugin": "^5.3.7",
