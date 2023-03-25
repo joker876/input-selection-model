@@ -1,6 +1,6 @@
 {
     "name": "input-selection-model",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "A class for handling HTML input selection range tasks.",
     "main": "dist/public-api.js",
     "files": [
