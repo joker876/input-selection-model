@@ -391,3 +391,7 @@ export function posToRange(posOrRange: number | SelectionRange<number>): Selecti
     if (typeof posOrRange == 'number') return { start: posOrRange, end: posOrRange };
     return posOrRange;
 }
+export function isSelectionRange<T>(v: any | SelectionRange<T>): v is SelectionRange<T> {
+    const keys = Object.keys(v);
+    return keys && keys.includes('start') && keys.includes('end');
+}
